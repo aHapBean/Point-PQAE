@@ -13,10 +13,10 @@ TL;DR: We introduce a **cross-reconstruction** method Point-PQAE, **a new learni
  <p>Figure 1: Comparison between <strong>cross-reconstruction (ours)</strong> and self-reconstruction.</p>
 </div>
 
+## 📰 News
+
 </h2>
 <h5 align="center"> If you find our project helpful, please give us a star ⭐ on GitHub for the latest update.  </h2>
-
-## 📰 News
 
 - 🎉 Sept, 2024: Our previous work [PCP-MAE](https://arxiv.org/abs/2408.08753) is accepted by **NeurIPS 2024 as Spotlight**, check out the [code]()
 - 🎉 Jun, 2025: Point-PQAE is accepted by **ICCV 2025**.
