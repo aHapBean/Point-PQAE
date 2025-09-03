@@ -6,15 +6,15 @@
 
 > Point-PQAE: Self-Supervised Cross Reconstruction with Decoupled Views for Point Cloud Learning
 
-</h2>
-<h5 align="center"> If you find our project helpful, please give us a star ⭐ on GitHub for the latest update.  </h2>
-
 TL;DR: We introduce a **cross-reconstruction** method Point-PQAE, **a new learning paradigm for point cloud self-supervised learning**. By reconstructing one decoupled view from another, it creates a more challenging task than Point-MAE's **self-reconstruction**, leading to significantly better performance.
 
 <div  align="center">    
  <img src="./assets/figs/teaser.jpg" width = "1100"  align=center />
  <p>Figure 1: Comparison between <strong>cross-reconstruction (ours)</strong> and self-reconstruction.</p>
 </div>
+
+</h2>
+<h5 align="center"> If you find our project helpful, please give us a star ⭐ on GitHub for the latest update.  </h2>
 
 ## 📰 News
 
