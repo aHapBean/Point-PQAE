@@ -1,0 +1,47 @@
+optimizer : {
+  type: AdamW,
+  kwargs: {
+  lr : 0.0005,
+  weight_decay : 0.05
+}}
+
+scheduler: {
+  type: CosLR,
+  kwargs: {
+    epochs: 300,
+    initial_epochs : 10
+}}
+
+dataset : {
+  train : { _base_: cfgs/dataset_configs/ShapeNet-55.yaml,
+            others: {subset: 'train', npoints: 1024}},
+  val : { _base_: cfgs/dataset_configs/ShapeNet-55.yaml,  # Useless
+            others: {subset: 'test', npoints: 1024}},
+  test : { _base_: cfgs/dataset_configs/ShapeNet-55.yaml,
+            others: {subset: 'test', npoints: 1024}},
+}
+
+model : {
+  NAME: Point_PQAE,
+  group_size: 32,
+  num_group: 64, 
+  transformer_config: { 
+    trans_dim: 384,
+    encoder_dims: 384,
+    depth: 12,
+    drop_path_rate: 0.1,
+    num_heads: 6, 
+    decoder_depth: 4,
+    decoder_num_heads: 6,
+  },
+  
+  add_rotate_to_crop : True,  # decoupling views
+  min_crop_rate: 0.6, # by default 0.6 
+  loss_type: 'cdl2',    # by default:cdl2 |  cos , cdl1, cdl2
+}
+
+npoints: 1024
+total_bs : 128
+step_per_update : 1
+max_epoch : 300  
+validate : 'none' # 'svm', 'zeroshot'
