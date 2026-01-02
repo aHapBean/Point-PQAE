@@ -15,14 +15,14 @@ class ShapeNet(data.Dataset):
     def __init__(self, config):
         self.data_root = config.DATA_PATH
         self.pc_path = config.PC_PATH
-        self.img_path = config.IMG_PATH
+        # self.img_path = config.IMG_PATH
         self.ratio = config.ratio      
         
-        self.text_list = {}
-        self.index_list = {}
-        for index, row in pd.read_json(config.TEXT_PATH).iterrows():
-            self.text_list["0" + str(row['catalogue'])] = row['describe']
-            self.index_list["0" + str(row['catalogue'])] = index
+        # self.text_list = {}
+        # self.index_list = {}
+        # for index, row in pd.read_json(config.TEXT_PATH).iterrows():
+        #     self.text_list["0" + str(row['catalogue'])] = row['describe']
+        #     self.index_list["0" + str(row['catalogue'])] = index
         self.subset = config.subset
         self.npoints = config.N_POINTS
 
